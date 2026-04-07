@@ -4,10 +4,13 @@ import {
   ChevronDown,
   Github,
   Linkedin,
-
   Download,
 } from "lucide-react";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+
+// ✅ Import images
+import heroBg from "@/assets/hero-bg.jpg";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const skills = [
   "React",
@@ -28,7 +31,7 @@ const skills = [
   "Figma",
   "Git",
   "GitHub Actions",
-  "Salesforce"
+  "Salesforce",
 ];
 
 export const Hero = () => {
@@ -42,7 +45,7 @@ export const Hero = () => {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="/hero-bg.jpg"
+          src={heroBg} // ✅ fixed
           alt="Hero image"
           className="w-full h-full object-cover opacity-40"
         />
@@ -59,8 +62,7 @@ export const Hero = () => {
               backgroundColor: "#20B2A6",
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              animation: `slow-drift ${15 + Math.random() * 20
-                }s ease-in-out infinite`,
+              animation: `slow-drift ${15 + Math.random() * 20}s ease-in-out infinite`,
               animationDelay: `${Math.random() * 5}s`,
             }}
           />
@@ -106,8 +108,9 @@ export const Hero = () => {
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
 
+              {/* ✅ Fixed CV path */}
               <a
-                href="/AkankshaShelar.pdf"
+                href={`${import.meta.env.BASE_URL}AkankshaShelar.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -126,10 +129,10 @@ export const Hero = () => {
 
               {[
                 { icon: Github, href: "https://github.com/Learnmorecoding" },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/akankshashelar/" },
-
-
-
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/akankshashelar/",
+                },
               ].map((social, idx) => (
                 <a
                   key={idx}
@@ -151,7 +154,7 @@ export const Hero = () => {
 
               <div className="relative glass rounded-3xl p-2 glow-border">
                 <img
-                  src="/profile-photo.jpg"
+                  src={profilePhoto} // ✅ fixed
                   alt="Profile"
                   className="w-full aspect-[4/5] object-cover rounded-2xl"
                 />

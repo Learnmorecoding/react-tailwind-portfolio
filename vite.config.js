@@ -6,7 +6,7 @@ import path from "path";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
- // base: "/react-tailwind-portfolio/",
+ base: "/react-tailwind-portfolio/",
  /* server: {
     open:true,
     port:4001,
