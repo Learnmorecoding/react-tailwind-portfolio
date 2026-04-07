@@ -19,7 +19,6 @@ export const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -27,14 +26,15 @@ export const Navbar = () => {
     <header
       className={`fixed top-0 left-0 right-0 transition-all duration-500 ${
         isScrolled ? "glass-strong py-3" : "bg-transparent py-5"
-      }  z-50`}
+      } z-50`}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
+        {/* Logo */}
         <a
           href="#"
           className="text-xl font-bold tracking-tight hover:text-primary"
         >
-          PM<span className="text-primary">.</span>
+          AS<span className="text-primary">.</span>
         </a>
 
         {/* Desktop Nav */}
@@ -54,7 +54,9 @@ export const Navbar = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <a href="#contact">
+            <Button size="sm">Contact Me</Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -81,9 +83,13 @@ export const Navbar = () => {
               </a>
             ))}
 
-            <Button onClick={() => setIsMobileMenuOpen(false)}>
-              Contact Me
-            </Button>
+            {/* Contact Button Mobile */}
+            <a
+              href="#contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <Button>Contact Me</Button>
+            </a>
           </div>
         </div>
       )}

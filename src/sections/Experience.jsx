@@ -1,15 +1,15 @@
 const experiences = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
+    period: "2025 - 2026",
+    role: "Associate Software Engineer",
+    company: "Pletra Technologies India Pvt. Ltd.",
     description:
       "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
     technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
     current: true,
   },
   {
-    period: "2020 — 2022",
+    period: "2022 — 2023",
     role: "Frontend Engineer",
     company: "Digital Solutions Co.",
     description:
